@@ -1,0 +1,3 @@
+KAFKA_BOOTSTRAP_SERVERS = "localhost:9092"
+KAFKA_TOPIC = "transactions"
+EVENTS_PER_SECOND = 2000
