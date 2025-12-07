@@ -15,7 +15,7 @@ currencies = ["USD", "EUR", "INR"]
 
 def generate_event():
     return {
-        "transactionId": str(uuid),
+        "transactionId": str(uuid.uuid4()),
         "userId": randint(10000, 99999),
         "amount": round(randint(100, 50000)/1.3, 2),
         "currency": choice(currencies),
