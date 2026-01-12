@@ -31,7 +31,7 @@ def start_producing():
     while True:
         event = generate_event()
         print(event)
-        # producer.send(KAFKA_TOPIC, event)
+        producer.send(KAFKA_TOPIC, event)
         time.sleep(interval)
 
 start_producing()

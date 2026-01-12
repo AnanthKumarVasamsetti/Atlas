@@ -1,5 +1,4 @@
 version: "3.9"
-
 services:
   zookeeper:
     image: ubuntu/zookeeper:latest
@@ -43,6 +42,14 @@ services:
       - postgres_data:/var/lib/postgresql/data
     networks:
       - pipeline-net
+  
+  streamProcessor:
+  build: ./streamProcessor
+  container_name: streamProcessor
+  depends_on:
+    - kafka
+  networks:
+    - pipeline-net
 
 networks:
   pipeline-net:
